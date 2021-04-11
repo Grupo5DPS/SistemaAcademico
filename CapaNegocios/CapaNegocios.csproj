@@ -43,7 +43,9 @@
     <Compile Include="CarreraBL.cs" />
     <Compile Include="Interfaces\IAsignatura.cs" />
     <Compile Include="Interfaces\ICarrera.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioBL.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

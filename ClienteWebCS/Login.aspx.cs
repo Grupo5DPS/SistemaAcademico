@@ -8,6 +8,7 @@ using System.Web.Security; // Namesapace para manejar seguridad
 
 public partial class Login : System.Web.UI.Page
 {
+    ServiceReferenceUsuario.WSLoginSoapClient servicio = new ServiceReferenceUsuario.WSLoginSoapClient();
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -16,10 +17,16 @@ public partial class Login : System.Web.UI.Page
     {
         string usuario = Login1.UserName;
         string password = Login1.Password;
-        if (usuario == "juan" && password == "123")
+        string[] valores = servicio.Login(usuario,password).ToArray();
+        if (valores[0] == "0" && valores[1] == "Alumno")
         {
-            FormsAuthentication.RedirectFromLoginPage(usuario, false);
+            string datosp = Convert.ToString(valores[2]); ;
+            FormsAuthentication.RedirectFromLoginPage(datosp, false);
         }
-        else Login1.FailureText = "Usuario y/o Contraseñas invalidas";
+        else if (valores[0] == "0" && valores[1] == "Docente")
+            Login1.FailureText = "Usted es docente, no tiene acceso";
+        else 
+            Login1.FailureText = valores[1];
+       
     }
 }

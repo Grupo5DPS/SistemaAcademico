@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{EBCEC0A3-DA80-4D20-B5D4-1B9DFCFC9789}"
 EndProject
@@ -63,6 +63,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClienteWebCS", "http://loca
 		SlnRelativePath = "ClienteWebCS\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{4FC152D9-AC23-42CF-A4E5-6A12DA306D74} = {4FC152D9-AC23-42CF-A4E5-6A12DA306D74}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteConsola", "ClienteConsola\ClienteConsola.csproj", "{24FFFC61-1682-4735-8D90-057DD663AF53}"
 EndProject
@@ -112,5 +115,8 @@ Global
 		{A6B1D16B-AD37-419D-B1BA-35285919B544} = {F4E1E036-B0D2-4034-B189-482A19F54F3A}
 		{04DEF132-0387-44CF-857D-6FDD5196782D} = {F4E1E036-B0D2-4034-B189-482A19F54F3A}
 		{24FFFC61-1682-4735-8D90-057DD663AF53} = {F4E1E036-B0D2-4034-B189-482A19F54F3A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D95F9A7-8DFB-4876-AD0B-58B611AF4E8A}
 	EndGlobalSection
 EndGlobal
